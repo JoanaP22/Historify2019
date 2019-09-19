@@ -1,3 +1,25 @@
 p {
     text-align: center;
 }
+
+.container-fluid {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.btn-search {
+    width: 75%;
+    background-color:#4F665F;
+}
+
+.btn-outline-primary {
+    background-color: #4F665F;
+    color: white;
+}
+
+.sidebar-atributes{
+    background-color: #4F665F ;
+    border-radius: 25px;
+}
+
+

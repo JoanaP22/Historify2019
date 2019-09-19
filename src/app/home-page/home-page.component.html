@@ -1,82 +1,80 @@
-<!--Div para o main content da home page -->
-<div class="maindiv">
-    <br>
-    <p>Pesquisa de locais...</p>
-    <hr>
 
-    <!-- dop down dos concelhos-->
-    <!-- <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Localização
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Barcelos</a>
-            <a class="dropdown-item" href="#">Braga</a>
-            <a class="dropdown-item" href="#">Porto</a>
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Col- 9 para toda a main div -->
+        <div class="col-9">
+            <div class="row">
+                <div class="col-12">
+                    Pesquise o local de Interesse
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Localização - drop menu -->
+                <div class="col-4">
+                    <div class="dropdown text-center">
+                        <button class="btn btn-secondary dropdown-toggle btn-search " type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Localização
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Barcelos</a>
+                            <a class="dropdown-item" href="#">Braga</a>
+                            <a class="dropdown-item" href="#">Porto</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Locais de Interesse - drop menu -->
+                <div class="col-4">                 
+                    <div class="dropdown text-center">
+                        <button class="btn btn-secondary dropdown-toggle btn-search" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                            Locais de Interesse
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Paço dos Duques de Bragança</a>
+                            <a class="dropdown-item" href="#">Torre da Porta Nova</a>
+                            <a class="dropdown-item" href="#">Jardim das Barrocas</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão de pesquisa -->
+                <div class="col-2">
+                    <button type="button" class="btn btn-outline-primary">=></button>
+                </div>
+            <!-- Fecho da row -->
+            </div>   
+
+            <!-- Row para colocar o mapa interactivo -->
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- tentar inserir o codigo do mapa aqui -->
+
+                </div>
+            </div>
+
+
+           
+
+
         </div>
-    </div> -->
 
-    <br>
+        <div class="col-3">
+            <div class="sidebar-atributes text-center"> sidebar
 
-    <!-- dop down dos locais-->
-    <!-- <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false" role="button">
-           Locais de Interesse
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Paço dos Duques de Bragança</a>
-            <a class="dropdown-item" href="#">Torre da Porta Nova</a>
-            <a class="dropdown-item" href="#">Jardim das Barrocas</a>
+            </div>
         </div>
-    </div> -->
 
-    <!--Botão de pesquisa -->
+
+
+    </div>
+
 
 </div>
-
-
-<div class="container">
-
-        <div class="row">
-                <div class="col-4">
-                        <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Localização
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Barcelos</a>
-                                    <a class="dropdown-item" href="#">Braga</a>
-                                    <a class="dropdown-item" href="#">Porto</a>
-                                </div>
-                            </div>
-                </div>
-                <div class="col-4">
-                        <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false" role="button">
-                                   Locais de Interesse
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Paço dos Duques de Bragança</a>
-                                    <a class="dropdown-item" href="#">Torre da Porta Nova</a>
-                                    <a class="dropdown-item" href="#">Jardim das Barrocas</a>
-                                </div>
-                            </div>
-                </div>
-                <div class="col-1">
-                        <button type="button" class="btn btn-outline-primary">Primary</button>
-                </div>
-                <div class="col-3">
-                        3 of 3
-                </div>
-              </div>
-
-
-</div>
-
-<button class="btn btn-primary">Button</button>
-<!--Div para a barra fixa da home page -->
-<div class="sidebar"> </div>
