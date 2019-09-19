@@ -1,0 +1,34 @@
+
+
+.bg-dark {
+    background-color: #4F665F !important;
+  }
+  
+  .navbar-logo {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+  }
+  
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1500px;
+    }
+  }
+  
+  .navbar {
+    font-weight: 600;
+  }
+  
