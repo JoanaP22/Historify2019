@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { AdminComponent } from './admin/admin.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { TestesparvosComponent } from './testesparvos/testesparvos.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     SugestoesComponent,
     AdminComponent,
     SobreNosComponent,
+    TestesparvosComponent,
     
   ],
   imports: [

@@ -1,0 +1,81 @@
+.container-fluid {
+    margin-top:20px;
+    margin-bottom: 15px;
+}
+
+
+/* CSS do formulario */
+
+.main-content {
+    margin-top: 30px;
+    padding-right: 40px;
+    padding-left: 60px;
+    
+}
+
+.main-title {
+    color: #4F665F;
+}
+
+hr {
+    border-top: 4px solid #4F665F;
+}
+
+.local-interesse {
+    margin-top: 20px;
+}
+
+
+.container-margin-top {
+    margin-top: 50px;
+    
+}
+
+.form-test {
+    padding-left: 15px;
+}
+
+.local-history {
+    resize: none;
+}
+
+.btn {
+    width: 60%;
+    background-color:  #4F665F;
+}
+
+.coluna-submeter {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+
+/* sidebar */
+
+.sidebar-atributes{
+    background-color: #4F665F ;
+    border-radius: 25px;
+    height: 70%;
+    position: absolute;
+    width: 85%;
+}
+
+input {
+    background-color: #4F665F;
+    color: white;
+}
+
+::-webkit-input-placeholder { 
+    color: white;
+    opacity: 0.5;
+  }
+
+textarea {
+    background-color: #4F665F;
+    color: white;
+}
+
+input:focus {
+    background-color: #4F665F;
+    color: white;
+}

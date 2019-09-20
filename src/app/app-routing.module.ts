@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { TestesparvosComponent } from './testesparvos/testesparvos.component';
 
 
 
@@ -19,9 +20,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'navbar', component: NavbarComponent},
   {path: 'sugestoes', component: SugestoesComponent},
-  {path: 'sobre-nos', component: SobreNosComponent}
-  
-
+  {path: 'sobre-nos', component: SobreNosComponent},
+  {path: 'testesparvos', component: TestesparvosComponent}
 
 ];
 
