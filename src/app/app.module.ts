@@ -32,7 +32,8 @@ import { TestesparvosComponent } from './testesparvos/testesparvos.component';
     SugestoesComponent,
     AdminComponent,
     SobreNosComponent,
-    
+    TestesparvosComponent
+
   ],
   imports: [
     BrowserModule,
