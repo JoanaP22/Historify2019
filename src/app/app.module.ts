@@ -43,7 +43,8 @@ import { TestesparvosComponent } from './testesparvos/testesparvos.component';
     FormsModule,
     AngularFontAwesomeModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDXr4Wli2GuRIazCLMuFHFknDKF34AivbM'})
+      apiKey: ''})
+
   ],
   providers: [ApiDBService, ApiTempoService],
   bootstrap: [AppComponent]
