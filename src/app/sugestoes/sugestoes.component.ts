@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SugestoesComponent implements OnInit {
 
+  //declaração das variaveis dos inputs
+
+  localName: '';
+  localYear: number;
+  localLat: number;
+  localLong: number;
+  localPropr = '';
+  localHistory = '';
+  localOtherInfo = '';
+
   constructor() { }
 
   ngOnInit() {

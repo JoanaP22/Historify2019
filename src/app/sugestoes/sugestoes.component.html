@@ -36,12 +36,14 @@
                         
                                     <label for="inputAddress" class="col-sm-2 col-form-label">Nome do Local</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" placeholder="Paço dos Condes">
+                                        <input type="text" class="form-control" placeholder="Paço dos Condes" [(ngModel)]="localName"
+                                        [ngModelOptions]="{standalone: true}" required >
                                     </div>
                         
                                     <label for="inputAddress" class="col-sm-2 col-form-label">Ano de Construção</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" placeholder="Ano">
+                                        <input type="text" class="form-control" placeholder="Ano" [(ngModel)]="localYear"
+                                        [ngModelOptions]="{standalone: true}">
                                     </div>
                                 </div>
                         
@@ -52,7 +54,8 @@
                                     <p class="col-sm-3 col-form-label">Localização Geográfica</p>
                                     <label for="inputAddress" class="col-sm-1 col-form-label">Lat</label>
                                     <div class="col-sm-3">
-                                        <input type="number" class="form-control" placeholder="41.528249">
+                                        <input type="number" class="form-control" placeholder="41.528249" [(ngModel)]="localLat"
+                                        [ngModelOptions]="{standalone: true}" >
                                     </div>
                         
                                     <div class="col-1">
@@ -60,7 +63,8 @@
                                     </div>
                                     <label for="inputAddress" class="col-sm-1 col-form-label">Long</label>
                                     <div class="col-sm-3">
-                                        <input type="number" class="form-control" placeholder="-8.621737">
+                                        <input type="number" class="form-control" placeholder="-8.621737" [(ngModel)]="localLong"
+                                        [ngModelOptions]="{standalone: true}">
                                     </div>
                         
                                 </div>
@@ -70,7 +74,8 @@
                         
                                     <label for="inputAddress" class="col-sm-2 col-form-label">Proprietário Actual</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Câmara Municipal de Barcelos">
+                                        <input type="text" class="form-control" placeholder="Câmara Municipal de Barcelos" [(ngModel)]="localPropr"
+                                        [ngModelOptions]="{standalone: true}">
                                     </div>
                         
                                 </div>
@@ -82,7 +87,7 @@
                                         <label for="inputAddress" class="col-sm-2 col-form-label">História</label>
                                         <div class="col-sm-10">
                                             <textarea class="form-control local-history" id="exampleFormControlTextarea1" rows="4"
-                                            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo magna in consectetur luctus. Nullam vel quam eget ipsum pulvinar hendrerit. Sed sit amet lacus rutrum, posuere nisl non, interdum leo. Phasellus luctus in nisi nec efficitur. Sed auctor tellus a elit pulvinar, eget suscipit lorem elementum. Ut ac leo et felis sodales euismod. Suspendisse eu ipsum imperdiet, pellentesque leo quis, tincidunt nisi. Sed eleifend facilisis mauris sit amet suscipit. Donec vulputate nulla nisl, id hendrerit sem ornare sed. Maecenas efficitur purus vel nisl tristique viverra. Pellentesque volutpat felis vel urna faucibus commodo. Morbi quis velit purus. Maecenas fermentum orci vitae dignissim ultrices."
+                                            [(ngModel)]="localHistory" [ngModelOptions]="{standalone: true}" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo magna in consectetur luctus. Nullam vel quam eget ipsum pulvinar hendrerit."
                                             ></textarea>
                                         </div>
                             
@@ -93,14 +98,14 @@
                         
                                         <label for="inputAddress" class="col-sm-2 col-form-label">Outras Informações</label>
                                         <div class="col-sm-10">
-                                            <textarea class="form-control local-history" id="exampleFormControlTextarea1" rows="2" placeholder="...horários, preços..."></textarea>
+                                            <textarea class="form-control local-history" id="exampleFormControlTextarea1" rows="2" placeholder="Horários, preços..." [(ngModel)]="localOtherInfo" [ngModelOptions]="{standalone: true}" ></textarea>
                                         </div>
                             
                                 </div>
                         
                                 <div class="row justify-content-center coluna-submeter">
                                     <div class="col-4 text-center">
-                                            <button type="submit" class="btn btn-primary">Submeter</button>
+                                            <button type="submit" class="btn btn-primary" [disabled]= "(localName === '') || (localName === untouched ) ">Submeter</button>
                                     </div>
                                 </div>
                                 
@@ -116,8 +121,34 @@
         <div class="col-3">
 
             <!-- Sidebar com historia do site -->
-            <div class="sidebar-atributes text-center"> sidebar
+            <div class="sidebar-atributes "> 
+                <div class="row row-historify align-items-center">
+                    <div class="col-12 text-center">
+                        <h2>HISTORIFY</h2>
+                    </div>
+                </div>
+
+                <div class="row row-sobre align-items-center">
+                    <div class="col-12 text-center">
+                        <h5>Um pouco sobre o site...</h5>
+                    </div>
+                </div>
+
+                <div class="row row-historia align-items-top">
+                    <div class="col-12">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor odio libero, sed rhoncus leo porta eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla in ligula nec leo sagittis maximus in non sapien. Mauris interdum enim eu est commodo sodales. Ut tincidunt magna id mi mattis mollis. Donec gravida pellentesque dui, sit amet molestie nulla scelerisque ac.</p>
+                    </div>
+                </div>
+
+              
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- 
+PARA RESOLVER:
+
+Sidebar: se tiver fixed quando se da scroll down e a barra de navegação desaparece, deixa muita margem em cima. 
+Se estiver como position absolute, passa a aceitar scroll... -->

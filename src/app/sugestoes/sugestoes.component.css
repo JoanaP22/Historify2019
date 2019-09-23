@@ -58,6 +58,7 @@ hr {
     height: 70%;
     position: absolute;
     width: 85%;
+    padding-top: 30px;
 }
 
 input {
@@ -79,3 +80,43 @@ input:focus {
     background-color: #4F665F;
     color: white;
 }
+input:focus::placeholder {
+
+    color: transparent;
+}
+
+textarea:focus {
+    background-color: #4F665F;
+    color: white;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+textarea:focus::placeholder {
+    
+    color: transparent;
+}
+
+.row-historify {
+    height: 10%;
+    vertical-align: middle;
+    color: white;
+}
+
+.row-sobre {
+    height: 5%;
+    vertical-align:middle;
+    color: white;
+}
+
+.row-historia {
+    height: 85%;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: white;
+}
+
