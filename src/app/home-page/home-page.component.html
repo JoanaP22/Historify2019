@@ -16,30 +16,32 @@
                 <!-- Localização - drop menu -->
                 <div class="col-4">
                     <div class="dropdown text-center">
-                        <button class="btn btn-secondary dropdown-toggle btn-search " type="button" id="dropdownMenuButton"
+                        <button (click)="listarConcelhos()"  class="btn btn-secondary dropdown-toggle btn-search " type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Localização
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Barcelos</a>
+                        <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a *ngFor="let c of concelhos" class="dropdown-item" href="" >{{c.descricao}}</a>
+                            <!-- <a class="dropdown-item" href="#">Barcelos</a>
                             <a class="dropdown-item" href="#">Braga</a>
-                            <a class="dropdown-item" href="#">Porto</a>
+                            <a class="dropdown-item" href="#">Porto</a>-->
                         </div>
                     </div>
 
                 </div>
 
                 <!-- Locais de Interesse - drop menu -->
-                <div class="col-4">                 
+                <div class="col-4">
                     <div class="dropdown text-center">
-                        <button class="btn btn-secondary dropdown-toggle btn-search" type="button" id="dropdownMenuButton"
+                        <button (click)="listarLocais()" class="btn btn-secondary dropdown-toggle btn-search" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                             Locais de Interesse
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Paço dos Duques de Bragança</a>
+                        <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a *ngFor= "let l of locais| orderBy: 'nome'" class="dropdown-item" href="">{{l.nome}}</a>
+                            <!--<a class="dropdown-item" href="#">Paço dos Duques de Bragança</a>
                             <a class="dropdown-item" href="#">Torre da Porta Nova</a>
-                            <a class="dropdown-item" href="#">Jardim das Barrocas</a>
+                            <a class="dropdown-item" href="#">Jardim das Barrocas</a>-->
                         </div>
                     </div>
                 </div>
@@ -49,25 +51,52 @@
                     <button type="button" class="btn btn-outline-primary">=></button>
                 </div>
             <!-- Fecho da row -->
-            </div>   
+            </div>
+            <br><br>
+
 
             <!-- Row para colocar o mapa interactivo -->
             <div class="row">
                 <div class="col-12">
 
                     <!-- tentar inserir o codigo do mapa aqui -->
+                    <br>
+                   <!-- <agm-map [latitude]="latitude" [longitude]="longitude"  [zoom]="zoom" (mapClick)="placeMarker($event)"></agm-map>-->
+                    <agm-map [latitude]="latitude" [longitude]="longitude"  [zoom]="zoom">
+                        <agm-marker (mouseOver)="window.open()" (mouseOut)="window.close()" *ngFor="let marker of locais" [latitude]="marker.latitude"
+                          [longitude]="marker.longitude" [iconUrl]="
+                          {url: './assets/pino.png',scaledSize: {width: 25,  height: 25}}">
+                          <agm-info-window #window>
+                            <h5> {{marker.nome}}</h5>
+                            <img src="assets/img/{{marker.foto_principal}}" alt="{{marker.nome}}" width="100" height="80">
+                            <!--<h6>Longitude: {{marker.longitude}}</h6>
+                            <h6>Latitude: {{marker.latitude}}</h6>-->
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
 
                 </div>
             </div>
 
 
-           
+
 
 
         </div>
 
+        <!--sidebar-->
         <div class="col-3">
-            <div class="sidebar-atributes text-center"> sidebar
+            <div class="sidebar-atributes text-center">
+<!-- só para testes  TEMPO-->
+
+        <img src={{src}}  width="100" height="80">
+        {{temp}}  {{stateWeather}}
+
+       <!-- <ul>
+          <li *ngFor="let t of temp">
+           <h2> {{t.main}}</h2>
+          </li>
+        </ul>-->
 
             </div>
         </div>

@@ -21,5 +21,7 @@ p {
     background-color: #4F665F ;
     border-radius: 25px;
 }
-
-
+/*mapa*/
+agm-map {
+  height: 300px;
+ }
