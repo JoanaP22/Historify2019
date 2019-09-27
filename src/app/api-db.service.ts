@@ -6,9 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiDBService {
 
-  utilizadoresURL = 'http://localhost:5000/api/utilizador';
-  concelhosURL = 'http://localhost:5000/api/concelho';
-  locaisURL = 'http://localhost:5000/api/local';
+  utilizadoresURL = 'http://localhost:5000/api/utilizador/';
+  concelhosURL = 'http://localhost:5000/api/concelho/';
+  locaisURL = 'http://localhost:5000/api/local/';
 
 
 
@@ -20,10 +20,11 @@ export class ApiDBService {
     return this.http.get<any[]>(this.utilizadoresURL);
   }
 
-  listarConcelhos() {
+  listarConcelhos(src: string) {
 
-    return this.http.get<any[]>(this.concelhosURL);
+    return this.http.get<any[]>(src);
   }
+
   listarLocais() {
 
     return this.http.get<any[]>(this.locaisURL);

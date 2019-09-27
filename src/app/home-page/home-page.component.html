@@ -20,15 +20,21 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Localização
                         </button>
-                        <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a *ngFor="let c of concelhos" class="dropdown-item" href="" >{{c.descricao}}</a>
-                            <!-- <a class="dropdown-item" href="#">Barcelos</a>
+
+                        <div   class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                            <ng-container *ngFor="let c of concelhos"  > <a (click)="onClick(c.id_concelho)"  [routerLink]="['']" routerLinkActive="router-link-active"  class="dropdown-item" >  {{c.descricao}}</a></ng-container>
+                            <!--<a class="dropdown-item" href="#">Barcelos</a>
                             <a class="dropdown-item" href="#">Braga</a>
                             <a class="dropdown-item" href="#">Porto</a>-->
                         </div>
+
                     </div>
 
                 </div>
+
+
+
 
                 <!-- Locais de Interesse - drop menu -->
                 <div class="col-4">
@@ -38,13 +44,15 @@
                             Locais de Interesse
                         </button>
                         <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a *ngFor= "let l of locais| orderBy: 'nome'" class="dropdown-item" href="">{{l.nome}}</a>
+                           <ng-container *ngFor="let l of locais| orderBy: 'nome'" > <a *ngIf="l.id_concelho == concselec" [routerLink]="['']" routerLinkActive="router-link-active"  class="dropdown-item"  ><span >{{l.nome}}</span></a></ng-container>
                             <!--<a class="dropdown-item" href="#">Paço dos Duques de Bragança</a>
                             <a class="dropdown-item" href="#">Torre da Porta Nova</a>
                             <a class="dropdown-item" href="#">Jardim das Barrocas</a>-->
                         </div>
                     </div>
                 </div>
+
+
 
                 <!-- Botão de pesquisa -->
                 <div class="col-2">
@@ -53,16 +61,31 @@
             <!-- Fecho da row -->
             </div>
             <br><br>
+<!--
+            <select (change)="onChange($event)" class="form-control">
+                <option *ngFor="let c of concelhos" [value]="c.id_concelho" >
+                   {{c.descricao}}
+                </option>
+            </select>
+
+            <select class="form-control">
+               <ng-container  *ngFor="let l of locais| orderBy: 'nome'" ><option *ngIf="l.id_concelho == concselec"
+                  [selected]="l.id_local">
+                  <span >{{l.nome}}</span>
+               </option></ng-container>
+           </select> -->
 
 
             <!-- Row para colocar o mapa interactivo -->
             <div class="row">
                 <div class="col-12">
+                  <p >Posição atual: Lat: {{latitudeAtual}} Long: {{longitudeAtual}}</p>
+                  <p >Local: Lat: {{latitude}} Long: {{longitude}}</p>
 
                     <!-- tentar inserir o codigo do mapa aqui -->
                     <br>
                    <!-- <agm-map [latitude]="latitude" [longitude]="longitude"  [zoom]="zoom" (mapClick)="placeMarker($event)"></agm-map>-->
-                    <agm-map [latitude]="latitude" [longitude]="longitude"  [zoom]="zoom">
+                    <agm-map [latitude]="latitude" [longitude]="longitude"  [zoom]="zoom" >
                         <agm-marker (mouseOver)="window.open()" (mouseOut)="window.close()" *ngFor="let marker of locais" [latitude]="marker.latitude"
                           [longitude]="marker.longitude" [iconUrl]="
                           {url: './assets/pino.png',scaledSize: {width: 25,  height: 25}}">
@@ -80,8 +103,6 @@
 
 
 
-
-
         </div>
 
         <!--sidebar-->
@@ -89,8 +110,11 @@
             <div class="sidebar-atributes text-center">
 <!-- só para testes  TEMPO-->
 
+        <h3>{{descConc}}</h3>
         <img src={{src}}  width="100" height="80">
-        {{temp}}  {{stateWeather}}
+        <p> {{stateWeather}}</p>
+        <p> {{temp}}°C </p> <br>
+
 
        <!-- <ul>
           <li *ngFor="let t of temp">

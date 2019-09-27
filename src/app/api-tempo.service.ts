@@ -8,15 +8,18 @@ export class ApiTempoService {
 
   weahtherApiLink ='https://api.openweathermap.org/data/2.5/weather';
   params = '?q=';
-  city = 'Barcelos';
+  city : string; //= 'Barcelos';
   country = ',pt';
-  apiKey = '&APPID='
+  apiKey = '&APPID=27572f5bbca7f98bcd805ae3a4f99413'
   celcius = '&units=metric';
+  lang = "&lang=pt";
 
   constructor(private http: HttpClient) { }
 
-baseask(){
-  return this.http.get(this.weahtherApiLink + this.params + this.city + this.country  + this.apiKey + this.celcius);
+baseask(city: string){
+  this.city = city;
+  return this.http.get(this.weahtherApiLink + this.params + this.city + this.country  + this.apiKey + this.celcius + this.lang);
+
 }
 
 }
