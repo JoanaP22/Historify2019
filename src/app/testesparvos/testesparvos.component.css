@@ -1,3 +1,6 @@
+.container-fluid {
+    overflow: none;
+}
 /* Atributos para a sidebar */
 .row-historify {
     height: 10%;
@@ -21,7 +24,7 @@
 .sidebar-atributes{
     background-color: #4F665F ;
     border-radius: 25px;
-    height: 90vh;
+    height: 81vh;
     position: absolute;
     width: 85%;
     padding-top: 30px;
@@ -107,7 +110,7 @@
 }
 
 .historia-imagens {
-    height: 75vh;
+    height: 68vh;
     overflow: auto;
 
 }
@@ -152,17 +155,19 @@
 }
 
 .local-imagem-horizontal-pequena {
-height: 10vh;
+height: 12vh;
 width: 100%;
 object-fit: cover;
 background-color: #4F665F;
 border-radius: 25px;
+margin-bottom: 5vh;
 
 }
 
 .imagens-pequenas {
     padding-left: 59px;
     padding-right: 61px;
+
 }
 
 .imagens-pequenas-col {
@@ -170,3 +175,38 @@ border-radius: 25px;
     padding-right: 5px;
 }
 
+.temperatura img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.temperatura p {
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.temperatura hr {
+    background-color: white;
+    border: 1px solid white;
+}
+
+.row-sobre h6 {
+    margin-bottom: 15px;
+}
+
+#distancia {
+    margin-top: 25px;
+}
+.row-sobre h4 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+
+#rating {
+    height: 30px;
+    width: 80%;
+    object-fit: cover;
+}
