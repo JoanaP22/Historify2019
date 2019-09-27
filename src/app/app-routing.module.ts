@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { TestesparvosComponent } from './testesparvos/testesparvos.component';
+import { LocaisComponent } from './locais/locais.component';
 
 
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'navbar', component: NavbarComponent},
   {path: 'sugestoes', component: SugestoesComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
-  {path: 'testesparvos', component: TestesparvosComponent}
+  {path: 'testesparvos', component: TestesparvosComponent},
+  {path: 'locais', component: LocaisComponent}
 
 
 ];

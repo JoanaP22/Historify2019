@@ -19,6 +19,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { AgmCoreModule} from '@agm/core';
 import { OrderModule } from 'ngx-order-pipe';
 import { TestesparvosComponent } from './testesparvos/testesparvos.component';
+import { LocaisComponent } from './locais/locais.component';
 
 
 @NgModule({
@@ -32,8 +33,9 @@ import { TestesparvosComponent } from './testesparvos/testesparvos.component';
     SugestoesComponent,
     AdminComponent,
     SobreNosComponent,
-    TestesparvosComponent
-
+    TestesparvosComponent,
+    LocaisComponent,
+    
   ],
   imports: [
     BrowserModule,

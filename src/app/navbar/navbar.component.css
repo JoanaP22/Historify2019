@@ -1,5 +1,4 @@
 
-
 .bg-dark {
     background-color: #4F665F !important;
   }
@@ -32,3 +31,9 @@
     font-weight: 600;
   }
   
+  .imagem-logo {
+    width: 40px;
+    height: 50px;
+    object-fit: cover;
+
+  }

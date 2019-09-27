@@ -1,128 +1,141 @@
-<div class="container container-margin-top">
 
-    <form class="form-test">
+<div class="container-fluid">
 
-        <!-- Nome do Local -->
-        <div class="form-group row">
+  <div class="row">
 
-            <label for="inputAddress" class="col-sm-2 col-form-label">Nome do Local</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder="Paço dos Condes">
-            </div>
+    <!-- Lado para o local -->
+    <div class="col-9 main-content">
 
-            <label for="inputAddress" class="col-sm-2 col-form-label">Ano de Construção</label>
-            <div class="col-sm-2">
-                <input type="text" class="form-control" placeholder="Ano">
-            </div>
-        </div>
+      <div class="row row-title">
 
 
-        <!-- Informações geograficas -->
-        <div class="form-group row">
+        <!-- Nome do local -->
+        <div class="col-6 main-title">
 
-            <p class="col-sm-3 col-form-label">Localização Geográfica</p>
-            <label for="inputAddress" class="col-sm-1 col-form-label">Lat</label>
-            <div class="col-sm-3">
-                <input type="number" class="form-control" placeholder="41.528249">
-            </div>
+          <h2>Nome do local</h2>
 
-            <div class="col-1">
-
-            </div>
-            <label for="inputAddress" class="col-sm-1 col-form-label">Long</label>
-            <div class="col-sm-3">
-                <input type="number" class="form-control" placeholder="-8.621737">
-            </div>
 
         </div>
 
-        <!-- Proprietário -->
-        <div class="form-group row">
+        <!-- Icons com links para funções -->
+        <div class="col-6 icons-links text-right ">
+          <img class="icon-imagem" src="assets\star.png">
+          <p><b>3.9</b></p>
+          <a href="#"><img class="icon-imagem" src="assets\visitado.png"></a>
+          <a href="#"><img class="icon-imagem" src="assets\heart.png"></a>
+          <a href="#"><img class="icon-imagem" src="assets\audio.png"></a>
+          <a href="#"><img class="icon-imagem" src="assets\cronologia.png"></a>
+          <a href="#"><img class="icon-imagem" src="assets\comentario.png"></a>
+          
+        </div>
+      </div>
 
-            <label for="inputAddress" class="col-sm-2 col-form-label">Proprietário Actual</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="Câmara Municipal de Barcelos">
-            </div>
+      <!-- Div container para historia e fotos com scroll -->
+      <div class="container-fluid historia-imagens">
+
+        <!-- Historia do local -->
+        <div class="row justify-content-center">
+
+          <div class="col-11 col-historia-local">
+            <h3 class="text-center">História do Local</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies volutpat nulla quis mattis. 
+              Quisque aliquam sollicitudin porttitor. Nullam magna dolor, pulvinar pharetra purus in, venenatis suscipit justo. Nullam facilisis enim dui, sed imperdiet lectus posuere imperdiet. 
+              Donec massa purus, blandit ac gravida sit amet, gravida id est. Etiam dictum dapibus orci, vel consectetur lorem placerat in. Fusce rhoncus placerat blandit. 
+              Pellentesque blandit nunc consectetur eros gravida efficitur. Fusce id metus id turpis consectetur lobortis. Aliquam erat volutpat. Mauris id arcu velit. In hac habitasse platea dictumst. 
+              Vivamus quis lectus sit amet ligula rhoncus venenatis nec in turpis. Fusce bibendum, erat congue tempor porttitor, massa lorem congue purus, ac pretium odio dui viverra orci.
+            </p>
+            <p>Fusce tempus ex ante, et eleifend sem suscipit ac. Curabitur vulputate tristique mi. Vestibulum dolor neque, vehicula sed eleifend sed, hendrerit eu tortor.
+              Nunc eu augue libero. Sed molestie sapien in condimentum vulputate. Sed mollis sem eu tortor pharetra posuere. Quisque mi risus, ornare iaculis tempor ut, rutrum id tellus. Nunc dignissim rutrum elit id tincidunt. 
+              Aenean vestibulum erat tellus. Etiam nisl justo, volutpat quis diam at, scelerisque vulputate nisl. Phasellus non felis mi.
+            </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies volutpat nulla quis mattis. 
+                Quisque aliquam sollicitudin porttitor. Nullam magna dolor, pulvinar pharetra purus in, venenatis suscipit justo. Nullam facilisis enim dui, sed imperdiet lectus posuere imperdiet. 
+                Donec massa purus, blandit ac gravida sit amet, gravida id est. Etiam dictum dapibus orci, vel consectetur lorem placerat in. Fusce rhoncus placerat blandit. 
+                Pellentesque blandit nunc consectetur eros gravida efficitur. Fusce id metus id turpis consectetur lobortis. Aliquam erat volutpat. Mauris id arcu velit. In hac habitasse platea dictumst. 
+                Vivamus quis lectus sit amet ligula rhoncus venenatis nec in turpis. Fusce bibendum, erat congue tempor porttitor, massa lorem congue purus, ac pretium odio dui viverra orci.
+            </p>
+            <p>Fusce tempus ex ante, et eleifend sem suscipit ac. Curabitur vulputate tristique mi. Vestibulum dolor neque, vehicula sed eleifend sed, hendrerit eu tortor.
+                  Nunc eu augue libero. Sed molestie sapien in condimentum vulputate. Sed mollis sem eu tortor pharetra posuere. Quisque mi risus, ornare iaculis tempor ut, rutrum id tellus. Nunc dignissim rutrum elit id tincidunt. 
+                  Aenean vestibulum erat tellus. Etiam nisl justo, volutpat quis diam at, scelerisque vulputate nisl. Phasellus non felis mi.
+            </p>       
+          </div>
+        </div>
+
+        <!-- Row para fotografias -->
+        <div class="row justify-content-center galeria">
+
+
+              <!-- IMAGEM VERTICAL -->
+              <div class="col-5 text-center" >
+                <img src="" class="local-imagem-vertical">
+              </div>
+
+              <!-- IMAGENS HORIZONTAIS -->
+              <div class="col-5">
+
+                  <img src="" class="local-imagem-horizontal">
+                  <img src="" class="local-imagem-horizontal">
+
+              </div>
+        </div>
+
+        <!-- Row para fotografias pequenas -->
+
+        <div class="row justify-content-center imagens-pequenas">
+          <div class="col imagens-pequenas-col">
+            <img src="" class="local-imagem-horizontal-pequena">
+          </div>
+          
+          <div class="col imagens-pequenas-col">
+            <img src="" class="local-imagem-horizontal-pequena">
+          </div>
+          
+          <div class="col imagens-pequenas-col">
+            <img src="" class="local-imagem-horizontal-pequena">
+          </div>
+          
+          <div class="col imagens-pequenas-col">
+            <img src="" class="local-imagem-horizontal-pequena">
+          </div>
+          
+          <div class="col imagens-pequenas-col">
+            <img src="" class="local-imagem-horizontal-pequena">
+          </div>
+          
 
         </div>
 
-        
-        <!-- História -->
-        <div class="form-group row">
+      </div>
 
-                <label for="inputAddress" class="col-sm-2 col-form-label">História</label>
-                <div class="col-sm-10">
-                    <textarea class="form-control local-history" id="exampleFormControlTextarea1" rows="4"></textarea>
+    </div>
+
+
+
+
+    <!-- Lado direito para a sidebar -->
+    <div class="col-3">
+
+        <div class="sidebar-atributes"> 
+            <div class="row row-historify align-items-center">
+                <div class="col-12 text-center">
+                    <h2>HISTORIFY</h2>
                 </div>
-    
-        </div>
+            </div>
 
-        <!-- Outras Informações -->
-        <div class="form-group row">
-
-                <label for="inputAddress" class="col-sm-2 col-form-label">Outras Informações</label>
-                <div class="col-sm-10">
-                    <textarea class="form-control local-history" id="exampleFormControlTextarea1" rows="2" placeholder="...horários, preços..."></textarea>
+            <div class="row row-sobre align-items-center">
+                <div class="col-12 text-center">
+                    <h5>Um pouco sobre o site...</h5>
                 </div>
-    
-        </div>
+            </div>
 
-        <div class="row justify-content-center coluna-submeter">
-            <div class="col-4 text-center">
-                    <button type="submit" class="btn btn-primary">Submeter</button>
+            <div class="row row-historia align-items-top">
+                <div class="col-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor odio libero, sed rhoncus leo porta eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla in ligula nec leo sagittis maximus in non sapien. Mauris interdum enim eu est commodo sodales. Ut tincidunt magna id mi mattis mollis. Donec gravida pellentesque dui, sit amet molestie nulla scelerisque ac.</p>
+                </div>
             </div>
         </div>
-        
-        
-    </form>
 
+
+    </div>
+  </div>
 </div>
-
-
-
-<!-- <form>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress2">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
-      </form> -->

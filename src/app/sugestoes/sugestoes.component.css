@@ -50,17 +50,6 @@ hr {
 }
 
 
-/* sidebar */
-
-.sidebar-atributes{
-    background-color: #4F665F ;
-    border-radius: 25px;
-    height: 70%;
-    position: absolute;
-    width: 85%;
-    padding-top: 30px;
-}
-
 input {
     background-color: #4F665F;
     color: white;
@@ -81,7 +70,6 @@ input:focus {
     color: white;
 }
 input:focus::placeholder {
-
     color: transparent;
 }
 
@@ -96,10 +84,24 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-textarea:focus::placeholder {
-    
+textarea:focus::placeholder {  
     color: transparent;
 }
+
+
+/* sidebar */
+
+.sidebar-atributes{
+    background-color: #4F665F ;
+    border-radius: 25px;
+    height: 80%;
+    position: absolute;
+    width: 85%;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 
 .row-historify {
     height: 10%;
@@ -108,14 +110,13 @@ textarea:focus::placeholder {
 }
 
 .row-sobre {
-    height: 5%;
     vertical-align:middle;
     color: white;
 }
 
 .row-historia {
-    height: 85%;
-    padding: 15px;
+   
+    
     font-size: 0.9rem;
     color: white;
 }
