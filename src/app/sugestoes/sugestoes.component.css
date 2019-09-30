@@ -7,7 +7,6 @@
 /* CSS do formulario */
 
 .main-content {
-    margin-top: 30px;
     padding-right: 40px;
     padding-left: 60px;
     
@@ -15,6 +14,13 @@
 
 .main-title {
     color: #4F665F;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#userImage {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
 }
 
 hr {
@@ -22,12 +28,24 @@ hr {
 }
 
 .local-interesse {
-    margin-top: 20px;
+    height: 10vh;
 }
 
+.local-interesse p, .local-interesse a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #4F665F;
+    transition-duration: 0.3s;
+}
+
+.local-interesse a:hover {
+    font-size: 0.9rem;
+    transition-duration: 0.3s;
+    transform-origin: center;
+}
 
 .container-margin-top {
-    margin-top: 50px;
+    margin-top: 25px;
     
 }
 
@@ -45,8 +63,8 @@ hr {
 }
 
 .coluna-submeter {
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 
@@ -94,14 +112,14 @@ textarea:focus::placeholder {
 .sidebar-atributes{
     background-color: #4F665F ;
     border-radius: 25px;
-    height: 80%;
+    height: 81vh;
     position: absolute;
     width: 85%;
     padding-top: 30px;
     padding-right: 20px;
     padding-left: 20px;
 }
-
+    
 
 .row-historify {
     height: 10%;
@@ -121,3 +139,7 @@ textarea:focus::placeholder {
     color: white;
 }
 
+label, .col-form-label{
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
